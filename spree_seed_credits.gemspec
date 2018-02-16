@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_seed_credits'
   s.version     = SpreeSeedCredits.version
-  s.summary     = 'Add extension summary here'
-  s.description = 'Add (optional) extension description here'
+  s.summary     = 'Adds seed credits to spree for ECHO seed bank catalogs.'
+  s.description = 'Designed for internal use at ECHO this adds seed credit values to spree products.'
   s.required_ruby_version = '>= 2.2.7'
 
-  s.author    = 'You'
-  s.email     = 'you@example.com'
-  s.homepage  = 'https://github.com/your-github-handle/spree_seed_credits'
+  s.author    = 'Nate Flood for ECHO Inc.'
+  s.email     = 'nflood@echonet.org'
+  s.homepage  = 'https://github.com/ECHOInternational/spree_seed_credits'
   s.license = 'BSD-3-Clause'
 
   # s.files       = `git ls-files`.split("\n").reject { |f| f.match(/^spec/) && !f.match(/^spec\/fixtures/) }
