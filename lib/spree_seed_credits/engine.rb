@@ -9,6 +9,11 @@ module SpreeSeedCredits
       g.test_framework :rspec
     end
 
+    initializer 'spree.register.seed_credits' do |app|
+      # app.config.spree.calculators.promotion_actions_create_item_adjustments << Spree::Calculator::SeedCreditCalculator
+      app.config.spree.adjusters << Spree::Adjustable::Adjuster::SeedCreditAdjuster
+    end
+
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
