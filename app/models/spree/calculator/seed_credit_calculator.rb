@@ -1,3 +1,4 @@
+# This is currently unused, we might integrate it later, but it seems unnecessary
 module Spree
   class Calculator::SeedCreditCalculator < Spree::Calculator
     def self.description

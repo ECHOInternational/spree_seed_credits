@@ -16,7 +16,7 @@ module Spree
       end
       PromotionHandler::Cart.new(order, line_item).activate
       # Add a seed credit adjustment to every line item when it is added.
-      SeedCreditHandler.new(order, line_item).activate
+      order.seed_credit.add_adjustment(line_item)
       Adjustable::AdjustmentsUpdater.update(line_item)
       TaxRate.adjust(order, [line_item]) if options[:line_item_created]
       persist_totals
