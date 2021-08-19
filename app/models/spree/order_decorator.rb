@@ -1,4 +1,5 @@
 module Spree
+  module OrderDecorator
 	Order.class_eval do
 		has_one :seed_credit, dependent: :destroy
 		# delegate :credit_count, :credit_count=, to: :seed_credit, prefix: :seed
@@ -18,4 +19,5 @@ module Spree
 	    	seed_credit_count >= credits_needed
 	    end
 	end
+  end
 end
