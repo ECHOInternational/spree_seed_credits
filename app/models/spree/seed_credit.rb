@@ -1,7 +1,7 @@
 module Spree
   class SeedCredit < ApplicationRecord
     include Spree::AdjustmentSource
-    belongs_to :order
+    belongs_to :order, foreign_key: 'spree_order_id'
     
     def add_adjustment line_item
       #create_unique_adjustment comes from the Spree::AdjustmentSource
