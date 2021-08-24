@@ -1,7 +1,7 @@
 module Spree
   module OrderDecorator
 	Order.class_eval do
-		has_one :seed_credit, dependent: :destroy
+		has_one :seed_credit, foreign_key: 'spree_order_id', dependent: :destroy
 		# delegate :credit_count, :credit_count=, to: :seed_credit, prefix: :seed
 		before_create :build_seed_credit
 
