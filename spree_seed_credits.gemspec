@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.version     = SpreeSeedCredits.version
   s.summary     = 'Adds seed credits to spree for ECHO seed bank catalogs.'
   s.description = 'Designed for internal use at ECHO this adds seed credit values to spree products.'
-  s.required_ruby_version = '>= 2.2.7'
+  s.required_ruby_version = '>= 2.2.8'
 
   s.author    = 'Nate Flood for ECHO Inc.'
   s.email     = 'nflood@echonet.org'
